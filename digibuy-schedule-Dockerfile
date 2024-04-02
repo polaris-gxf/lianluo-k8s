@@ -1,0 +1,7 @@
+from golang:1.22.1-alpine3.19
+MAINTAINER golaris
+
+ADD . /digibuy-schedule/
+RUN chmod +x /digibuy-schedule/digibuy-schedule
+WORKDIR "/digibuy-schedule"
+ENTRYPOINT ["sh","-c","/digibuy-schedule/digibuy-schedule"]
